@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <title>System Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>body { background-color: #000; color: #0f0; font-family: monospace; }</style>
+</head>
+<body class="flex items-center justify-center h-screen">
+    <div class="border border-green-700 p-10 w-96 bg-gray-900 rounded shadow-[0_0_15px_rgba(0,255,0,0.2)]">
+        <h2 class="text-2xl font-bold mb-6 text-center text-green-500">>> AUTHENTICATE</h2>
+        
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="mb-4 text-red-500 text-center">{{ messages[0] }}</div>
+        {% endif %}
+        {% endwith %}
+
+        <form method="post" class="space-y-4">
+            <div>
+                <label class="block mb-1">USER_ID</label>
+                <input type="text" name="username" class="w-full bg-black border border-green-700 p-2 text-green-500 focus:outline-none focus:border-green-400">
+            </div>
+            <div>
+                <label class="block mb-1">PASSCODE</label>
+                <input type="password" name="password" class="w-full bg-black border border-green-700 p-2 text-green-500 focus:outline-none focus:border-green-400">
+            </div>
+            <button type="submit" class="w-full bg-green-700 text-black font-bold py-2 mt-4 hover:bg-green-600 transition">ACCESS SYSTEM</button>
+        </form>
+    </div>
+</body>
+</html>
