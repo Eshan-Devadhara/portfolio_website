@@ -3,4 +3,8 @@ flask-sqlalchemy
 psycopg2-binary
 python-dotenv
 flask-login
+<<<<<<< HEAD
 gunicorn
+=======
+gunicorn
+>>>>>>> 39d9414673dfbc01f5b4f8a6e124d9201c508479
